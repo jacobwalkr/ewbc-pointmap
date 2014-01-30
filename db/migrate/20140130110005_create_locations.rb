@@ -3,6 +3,7 @@ class CreateLocations < ActiveRecord::Migration
     create_table :locations do |t|
       t.decimal :latitude
       t.decimal :longitude
+      t.string :description
 
       t.timestamps
     end
