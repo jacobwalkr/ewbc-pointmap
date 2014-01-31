@@ -1,6 +1,11 @@
 class LocationsController < ApplicationController
   def index
     @locations = Location.all
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: @locations }
+    end
   end
   
   def create
