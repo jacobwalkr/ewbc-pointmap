@@ -3,12 +3,8 @@ class ReportsController < ApplicationController
     @reports = Report.all
   end
   
-  def new
-    @report = Report.new
-  end
-  
   def create
-    report = Report.new report_params
+    report = Report.new(report_params)
     report.save
     
     redirect_to({ action: "show", id: report.id })

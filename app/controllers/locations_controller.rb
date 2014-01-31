@@ -3,12 +3,8 @@ class LocationsController < ApplicationController
     @locations = Location.all
   end
   
-  def new
-    @location = Location.new
-  end
-  
   def create
-    location = Location.new location_params
+    location = Location.new(location_params)
     location.save
     
     redirect_to({ action: "show", id: location.id })

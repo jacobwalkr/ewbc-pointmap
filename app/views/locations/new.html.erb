@@ -1,4 +1,6 @@
-<%= form_for @location do |f| %>
+<h1>New location</h1>
+
+<%= form_for Location.new do |f| %>
 	Latitude: <%= f.text_field :latitude %><br>
 	Longitude: <%= f.text_field :longitude %><br>
 	Description: <%= f.text_field :description %><br>
