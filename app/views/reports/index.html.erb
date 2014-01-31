@@ -1,0 +1,18 @@
+<table>
+	<thead>
+		<tr>
+			<td>Report ID</td>
+			<td>Location</td>
+			<td>Body</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @reports.each do |report| %>
+			<tr>
+				<td><%= report.id %></td>
+				<td><%= report.location.description %></td>
+				<td><%= report.body %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

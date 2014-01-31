@@ -1,0 +1,5 @@
+<%= form_for Report.new do |f| %>
+	Location: <%= f.text_field :location_id %><br>
+	Body: <%= f.text_field :body %><br>
+	<%= f.submit %>
+<% end %>
